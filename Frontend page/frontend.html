@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- jQuery (required for Bootstrap 4 dropdowns and other JS features) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap 4 JS bundle (includes Popper.js for tooltips and popovers) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .navbar{
+            background-color: transparent;
+            box-shadow: 0px 1px 20px #eaeaea;
+            transition: 1s ease 0s;
+        }
+
+        .navbar.solid{
+            background-color: #333;
+            transition: 1s ease 0s;
+        }
+
+        .carousel {
+            position: relative;
+        }
+
+        .carousel-inner img {
+            filter: brightness(50%);
+        }
+
+        .carousel-caption {
+            font-size: 4cm;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            color: white;
+        }
+
+        .caption-head {
+            padding-left: 5.5cm;
+            font-size: 1cm;
+            white-space: nowrap;
+            display: block;
+        }
+
+        .caption-body {
+            padding-top: 1cm;
+            padding-left: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            display: block; 
+            white-space: nowrap
+        }
+
+        .caption-desc{
+            font-size: 25px;
+            text-align: left;
+        }
+
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #training_1 {
+        font-size: 20px;
+        background-image: url("img/header-graphic-aiml.webp"); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: scroll; 
+        padding: 50px; 
+        color: white; 
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+        border-radius: 10px; 
+        filter: blur(80);
+    }
+
+    #training_2 {
+        font-size: 20px;
+        background-image: url("img/data-science-course.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: scroll; 
+        padding: 50px; 
+        color: white; 
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+        border-radius: 10px;
+    }
+
+    #training_3 {
+        font-size: 20px;
+        width: 98%;
+        background-image: url("img/1680181974410.png"); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: scroll; 
+        padding: 50px; 
+        color: white; 
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+        border-radius: 10px;
+    }
+
+    #training_4 {
+        font-size: 20px;
+        width: 98%;
+        background-image: url("img/java-microservices-frameworks-a-comprehensive-guide-l.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: scroll; 
+        padding: 50px; 
+        color: white; 
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+        border-radius: 10px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onscroll = function() {addSolidNavbar()};
+
+        function addSolidNavbar() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('.navbar').classList.add('solid');
+            } else {
+                document.querySelector('.navbar').classList.remove('solid');
+            }
+        }
+    </script>
+    
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="nav-item nav-link" href="#"><i class="navbar-brand fa-solid fa-user-secret"></i><span class="navbar-text"><b>KAZ</b></span></a>
+            
+            <a href="#" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu"><i class="navbar-toggler-icon"></i></a>
+            <div class="navbar-collapse collapse" id="navbar-menu">
+                <div class="navbar-nav ml-auto">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" aria-expanded="false">Lorem Ipsum</a>
+                        <div class="dropdown-menu">
+                            <h5 class="dropdown-header"><i class="fa-brands fa-python"></i> Lorem Ipsum</h5>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 1</a>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 2</a>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 3</a>
+                            <div class="dropdown-divider"></div>
+                            <h5 class="dropdown-header"><i class="fa-solid fa-c"></i> C</h5>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 1</a>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 2</a>
+                            <a class="dropdown-item small" href="#">Lorem Ipsum 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Stop</a>
+                        <div class="dropdown-menu">
+                            <h5 class="dropdown-header">Stop1</h5>
+                            <a href="" class="dropdown-item">stop I</a>
+                            <a href="" class="dropdown-item">stop II</a>
+                            <a href="" class="dropdown-item">stop III</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- slider -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <img class="w-100 d-block" src="img/Training-Management-Tool-1140x642.jpg" alt="">
+            <div class="carousel-caption">
+                <h2 class="caption-head">Welcome to Tech Training Management System</h2><br>
+                <!-- <p class="caption-desc">Need a hand in keeping track of all the Training your employees are given and also track their progress and certification? We are here to help and provide to you a
+                    training management system that keeps track of the Employees and the respective training they are assigned with and also record their progress and report the time left for each.</p>
+                </p><br> -->
+            </div>
+            <p class="caption-body">Your gateway to efficient management and performance</p>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container-fluid p-5">
+        <!-- cards -->
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <img src="img/Up-skilling-Drives-Value-in-the-Corporate.avif" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-heading">Employee List</h5>
+                    <p class="card-text">Here you will find the employee list</p>
+                    <a href="http://localhost/Training%20System/EmployeeCRUD/employee_index.php" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/Shutterstock_2348431265.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-heading">Training List</h5>
+                    <p class="card-text">Here you will find the Training List</p>
+                    <a href="http://localhost/Training%20System/TrainingCRUD/training_index.php" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/Framed-Certificate-Banner-Image.webp" class="card-img-top" height="220" alt="">
+                <div class="card-body">
+                    <h5 class="card-heading">Certification List</h5>
+                    <p class="card-text">Here you will find the List of the Certified Employees</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h1 class="training-head">Trainings Description</h1><br>
+        <div id="training_1" class="container-fluid">
+            <p><b><u>AIML</u></b>: Training on AI and machine learning (ML) can include courses, certifications, and programs. These can help you develop skills in programming, data analysis, and problem-solving. </p>
+            <p><b>Courses-</b><br>
+                <u>AI for Everyone</u>: An introductory course that provides an overview of AI, its benefits, and misconceptions<br> 
+                <u>AI programming with Python</u>: An online course that covers AI and ML at different levels<br>
+                <u>Gans Generative Adversarial Networks</u>: A course that teaches how to implement GANs in machine learning<br>
+                <u>Introduction to convolutional neural networks</u>: A course that covers different types of neural network architectures </p>
+
+            <p>
+            <u><b>Certifications</b></u>: AI certifications can help you stand out from other applicants and show employers that you have the skills they need.
+            </p>
+        </div><br><br>
+
+        <div id="training_2" class="container-fluid">
+            <p><b><u>Data Science</u></b>: learning the skills to extract insights from large datasets using techniques like statistical analysis, data manipulation, machine learning, and data visualization, often utilizing programming languages like Python and R to build predictive models and create visually appealing representations of data to inform decision-making across various industries. </p>
+            <p><b>Courses-</b><br>
+                <u>Programming languages</u>: Proficiency in Python (with libraries like Pandas, NumPy, Matplotlib, Seaborn) and R are crucial for data manipulation and analysis.  <br> 
+                <u>Statistics and Probability</u>: Understanding statistical concepts like hypothesis testing, regression analysis, and probability distributions is essential for interpreting data accurately.  <br>
+                <u>Data Cleaning and Preprocessing</u>: Techniques to handle missing values, outliers, and data formatting to prepare data for analysis. <br>
+                <u>Data Visualization</u>: Using tools like Tableau, Power BI, or Python libraries to present complex data insights in a clear and understandable manner.  </p>
+
+            <p>
+            <u><b>Certifications</b></u>: AI certifications can help you stand out from other applicants and show employers that you have the skills they need.
+            </p>
+        </div></div><br>
+
+        <div id="training_3" class="container-fluid">
+            <p><b><u>UI/UX</u></b>: A UI/UX design course teaches you how to create user-friendly and visually appealing interfaces and experiences for digital products, covering topics like user research, wireframing, prototyping, and usability testing.  </p>
+                <b><u>Core Concepts and Skills:</u></b>
+                    <u>User Research: </u>Understanding user needs, behaviors, and pain points through various research methods. <br><br>
+                    <u>Information Architecture: </u>Structuring and organizing content for optimal usability. <br><br>
+                    <u>Wireframing: </u>Creating low-fidelity visual representations of interfaces to plan layout and functionality. <br><br>
+                    <u>Prototyping: </u>Building interactive mockups to test and refine designs. <br><br>
+                    <u>Usability Testing: </u>Evaluating designs to identify areas for improvement and ensure a positive user experience. <br><br>
+                    <u> Visual Design: </u>Applying principles of visual design, such as typography, color theory, and layout, to create aesthetically pleasing interfaces. <br><br>
+                    <u>Interaction Design: </u>Designing how users interact with the interface, ensuring intuitive and efficient navigation. <br><br>
+                    <u>Accessibility: </u>Designing interfaces that are usable by people with disabilities. <br><br>
+                    <u>Tools: </u>Learning to use industry-standard design tools like Figma, Adobe XD, and Sketch.<br><br>
+
+            <p>
+            <u><b>Certifications</b></u>: UI/UX certifications can help you get proper user feedbacks and better understand their needs and expectations from a software.
+            </p>
+        </div><br><br>
+
+        <div id="training_4" class="container-fluid">
+            <p><b><u>Full Stack Training</u></b>: A full-stack course teaches you the skills to develop both the front-end (user interface) and back-end (server-side logic and databases) of web applications, covering languages like HTML, CSS, JavaScript, and frameworks like React, Node.js, and Spring Boot.</p>
+                <b><u>Core Concepts and Skills:</u></b>
+                <ul>
+                    <li><b>Front-end:</b></li>
+                    <li>HTML: The structure of web pages.</li>
+                    <li>CSS: Styles and visual presentation of web pages.</li>
+                    <li>JavaScript: Adds interactivity and dynamic behavior to web pages.</li>
+                    <li>Frameworks/Libraries: React, Angular, Vue.js (for building complex front-end applications).</li>
+                </ul>
+            <p>
+            <u><b>Why Full-Stack Development is in Demand:</b></u><br>
+            <P>
+            <b>Versatile Career Path:</b>
+                Full-stack developers can work on various aspects of web development, making them highly sought after<br>
+            <b>Increased Job Opportunities:</b>
+                Companies often prefer developers who can handle both front-end and back-end tasks.<br>
+            <b>Faster Development:</b>
+                Full-stack developers can work independently on entire projects, leading to faster development cycles. 
+            </P>
+            </p>
+        </div>
+        
+    </div>
+    
+
+    <footer class="container-fluid text-center p-5">
+        <hr style="height: 0cm;">
+        kaz &copy; 2025
+    </footer>
+</body>
+</html>
