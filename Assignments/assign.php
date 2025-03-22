@@ -83,7 +83,7 @@ if ($auth_success || (isset($_POST['assign']) && isset($_POST['employee_id'], $_
 
             if ($stmt->execute()) {
                 // Redirect to employee_training_index.php after a successful assignment
-                header("Location: ../employee_training_index.php");
+                header("Location: employee_training_index.php");
                 exit();
             } else {
                 echo "<div class='alert alert-danger'>Error: " . $conn->error . "</div>";
